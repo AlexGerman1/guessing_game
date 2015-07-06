@@ -1,0 +1,28 @@
+<script>
+
+var guess,
+    answer,
+    message;
+
+
+guess = prompt("I have been to 32 different States in the Country. How many have I lived in?");
+console.log("The user guessed " + guess);
+
+answer = 2;
+
+
+if (guess == answer) {
+   message = "Alright! You got it right!";
+  } else if ( guess == 1 || (guess >= 3 && guess <= 5) ) {
+   message = "Close! Try again!";
+  } else if ( guess >= 6 && guess <= 10 ) {
+   message = "Not quite, keep going!";
+  } else if ( guess >= 11 && guess <= 20 ) {
+   message = "A fair ways off.";
+  } else if ( guess >= 21 && guess <= 32 ) {
+   message = "Not even close."
+  }
+
+alert(message);
+
+</script>
