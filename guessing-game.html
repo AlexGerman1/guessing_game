@@ -1,5 +1,23 @@
 <script>
+///i should only appear on constructor branch
+var Game = function() {
+  this.makeGuess = function() {
+    this.guess = prompt("I have been to 32 different States in the Country. How many have I lived in?")
+    return this.guess;
+  };
+}
 
+var alexGame = new Game();
+while(wrong) {
+  var userInput = alexGame.makeGuess();
+  if (userInput = '2') {
+    alert('You got it!');
+  }
+}
+
+
+alexGame()
+////////////
 var guess,
     second_question,
     second_answer,
