@@ -17,7 +17,7 @@ var alex = new Game();
     if (alex.guess1 == '2') {
       alert('You got it!');
       wrong = false;
-    }else if ((alex.guess1 === 1) || (alex.guess1 >= 3 && alex.guess1 <= 5) ) {
+    }else if ((alex.guess1 == 1) || (alex.guess1 >= 3 && alex.guess1 <= 5) ) {
     alex.guess1 = prompt("close, try again");
     }else if ( alex.guess1 >= 6 && alex.guess1 <= 10 ) {
     alex.guess1 = prompt("lower");
