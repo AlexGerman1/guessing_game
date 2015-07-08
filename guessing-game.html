@@ -1,70 +1,78 @@
 <script>
-///i should only appear on constructor branch
+
 var Game = function() {
-  this.makeGuess = function() {
-    this.guess = prompt("I have been to 32 different States in the Country. How many have I lived in?")
-    return this.guess;
+
+  this.makeGuess1 = function() {
+    this.guess1 = prompt("I have been to 32 different States in the Country. How many have I lived in?");
+  }
+  this.makeGuess2 = function() {
+    this.guess2  = prompt("Well, how many states have you lived in?");
   };
 }
 
-var alexGame = new Game();
-while(wrong) {
-  var userInput = alexGame.makeGuess();
-  if (userInput = '2') {
-    alert('You got it!');
-  }
-}
+var alex = new Game();
+  wrong = true;
+  alex.makeGuess1();
+  while(wrong) {
+    if (alex.guess1 == '2') {
+      alert('You got it!');
+      wrong = false;
+    }else if ((alex.guess1 === 1) || (alex.guess1 >= 3 && alex.guess1 <= 5) ) {
+    alex.guess1 = prompt("close, try again");
+    }else if ( alex.guess1 >= 6 && alex.guess1 <= 10 ) {
+    alex.guess1 = prompt("lower");
+    }
+    else if ( alex.guess1 >= 11 && alex.guess1 <= 20 ) {
+    alex.guess1 = prompt("even lower");
+    }
+    else if ( alex.guess1 >= 21 && alex.guess1 <= 32 ) {
+    alex.guess1 = prompt("are you not getting the hint, it rhymes with shoe");
+    }
+    else if ( alex.guess1 > 32) {
+    alex.guess1 = prompt("try following the dirrections");
+    }
+
+    }
 
 
-alexGame()
-////////////
-var guess,
-    second_question,
-    second_answer,
-    answer,
-    message;
 
-guess = prompt("I have been to 32 different States in the Country. How many have I lived in?");
-console.log("The user guessed " + guess);
 
-answer = 2;
+  wrong = true;
+  alex.makeGuess2();
+  while(wrong) {
+    if (alex.guess2 == '2') {
+      alert('You got it 222222!');
+      wrong = false;
+    }
 
-while (guess !== answer) {
-  if ( guess === 1 || (guess >= 3 && guess <= 5) ) {
-   guess = prompt("close, try again");
- } else if ( guess >= 6 && guess <= 10 ) {
-   guess = prompt("lower");
- } else if ( guess >= 11 && guess <= 20 ) {
-   guess = prompt("even lower");
- } else if ( guess >= 21 && guess <= 32 ) {
-   guess = prompt("are you not getting the hint, it rhymes with shoe");
- } else if ( guess > 32) {
-   guess = prompt("try following the dirrections");
- } else if ( guess == answer ) {
-   message = "Alright! You got it right!";
-   break;
- }
-};
-
-alert(message);
-
-second_question = prompt("Well, how many states have you lived in?");
-console.log("The user guessed " + second_question);
-
-second_answer = 2
-if ( second_question == second_answer ) {
+if ( alex.guess2 == "2" ) {
    message = "Me too";
- } else if ( second_question == 1 || ( second_question >= 3 && second_question <= 5 ) ) {
+ } else if ( alex.guess2 == 1 || ( alex.guess2 >= 3 && alex.guess2 <= 5 ) ) {
    message = "It could be worse";
- } else if ( second_question >= 6 && second_question <= 10 ) {
+ } else if ( alex.guess2 >= 6 && alex.guess2 <= 10 ) {
    message = "army brat";
- } else if ( second_question >= 11 && second_question <= 20 ) {
+ } else if ( alex.guess2 >= 11 && alex.guess2 <= 20 ) {
    message = "outlaws?";
- } else if ( second_question >= 21 && second_question <= 32 ) {
+ } else if ( alex.guess2 >= 21 && alex.guess2 <= 32 ) {
    message = "what was high school like."
  } else {
    message = "try following the dirrections"
  }
 
-alert(message);
+
+
+  }
+
+
+Game()
+
+
+
+
+
+
+
+
+
+
 </script>
